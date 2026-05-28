@@ -1,0 +1,401 @@
+:root {
+  --bg-principal: #f4f9f4;
+  --bg-cards: #ffffff;
+  --bg-branco: #ffffff;
+  
+  --cor-primaria: #1d3557;
+  --cor-secundaria: #457b9d;
+  
+  --cor-destaque: #e6ac39;
+  --cor-hover-botao: #1d3557;
+  
+  --texto-escuro: #2b2d42;
+  --texto-titulos: #1d3557;
+  --texto-claro: #ffffff;
+  
+  --whatsapp: #25d366;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-principal);
+  padding-top: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+label,
+.produto button {
+  font-family: "Poppins", sans-serif;
+  color: var(--texto-titulos);
+}
+
+p {
+  color: var(--texto-escuro);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background-color: var(--cor-primaria);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  border-radius: 100px;
+  height: 90px;
+  width: 90px;
+  justify-content: space-around;
+}
+
+#div-header {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.button-header {
+  color: var(--texto-claro);
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-header:hover {
+  color: var(--cor-destaque);
+}
+
+#icone-lupa {
+  width: 20px;
+  height: 20px;
+}
+
+#icone-carrinho{
+  width: 20px;
+  height: 20px;
+}
+
+.h1-carrinho {
+  margin: 20px;
+}
+
+.h2 {
+  padding: 20px 0px 0px 40px;
+}
+
+.h2-sobre {
+  text-align: center;
+}
+
+.h2-carrinho {
+  display: flex;
+  margin: 20px;
+}
+
+.sobre {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 30px;
+  flex-wrap: wrap;
+}
+
+.sobre div {
+  background-color: var(--bg-branco);
+  width: 100%;
+  max-width: 320px;
+  padding: 0px 25px 25px 25px;
+  border-radius: 20px;
+  text-align: justify;
+}
+
+.servicos,
+.produtos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.servico,
+.produto {
+  width: 100%;
+  max-width: 300px;
+  min-width: 280px;
+  border: 2px solid var(--cor-secundaria);
+  background-color: var(--bg-cards);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 20px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.conteudo-produto,
+.conteudo-servico {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-produto,
+.img-servico {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.nome {
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--texto-titulos);
+}
+
+.descricao {
+  font-size: 15px;
+}
+
+.preco {
+  font-size: 20px;
+  color: var(--texto-titulos);
+  font-weight: bold;
+}
+
+.quantidade {
+  background: none;
+  border: none;
+  padding: 15px 0 0 0;
+}
+
+.img-carrinho-produto {
+  display: flex;
+  margin: 20px;
+  width: 100%;
+  max-width: 100px;
+  height: 150px;
+}
+
+.carrinho-produto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrinho-produto-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.carrinho-botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0 20px 0 0;
+}
+
+#total-pagar {
+  margin-left: auto;
+  margin-right: 75px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* BOTÕES DOS CARDS */
+.carrinho-botao button,
+.produto button,
+.servico button, 
+#form button {
+  background-color: var(--cor-primaria);
+  color: var(--bg-branco);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.carrinho-botao button:hover,
+.produto button:hover,
+.servico button:hover,
+#form button:hover {
+  color: var(--cor-destaque);
+  background-color: var(--cor-secundaria);
+}
+
+.divisor-principal {
+  background-color: var(--cor-secundaria);
+  display: block;
+  height: 5px;
+  margin: 1% 10%;
+}
+
+.divisor-carrinho {
+  background-color: var(--cor-secundaria);
+  display: block;
+  height: 5px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 20px 0 40px 0;
+  flex-wrap: wrap;
+  margin-top: 10%;
+}
+
+#pagamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#ouvidoria {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--whatsapp);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp img {
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 180px; 
+  }
+
+  #header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  #div-header {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .button-header {
+    font-size: 16px;
+  }
+
+  .h2 {
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  #pagamento div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 30px;
+  background-color: var(--bg-cards);
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.div-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.div-form input {
+  background-color: var(--bg-principal);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 5px;
+  height: 30px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+  gap: 20px;
+}
+
+#usuario {
+  margin-left: 5px;
+}
+
+#login-link {
+  display: flex;
+  align-items: center;
+}
