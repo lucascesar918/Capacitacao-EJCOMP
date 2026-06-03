@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx lite-server",
-    "test": "echo \"Nenhum teste foi criado\" && exit 1"
+    "test": "echo \"Nenhum teste foi criado\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
