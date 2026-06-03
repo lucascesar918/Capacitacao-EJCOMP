@@ -1,0 +1,24 @@
+# Dependências (não tem motivo pro node_modules ir pro repositório, além de ser muito pesado)
+node_modules/
+
+# Arquivos de build
+dist/
+build/
+
+# Logs de erro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações locais/pessoais do VS Code ou de outros editores
+.vscode/
+.idea/
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.swp
+
+# Arquivos lixo do sistema operacional
+.DS_Store
+Thumbs.db
