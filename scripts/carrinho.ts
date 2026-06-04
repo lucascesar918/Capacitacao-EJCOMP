@@ -3,17 +3,12 @@ interface ProdutosTipagem {
     estoqueInicial: number;
 }
 
-interface ProdutosMapeados {
-    [key: string]: ProdutosTipagem;
-}
+type ProdutoChaves = "pedigree" | "whiskas" | "formula-natural";
 
-interface EstoqueTipagem {
-    [key: string]: number;
-}
+type ProdutosMapeados = Record<ProdutoChaves, ProdutosTipagem>;
 
-interface QuantidadeTipagem {
-    [key: string]: number;
-}
+type EstoqueTipagem = Record<ProdutoChaves, number>;
+type QuantidadeTipagem = Record<ProdutoChaves, number>;
 
 const PRODUTOS: ProdutosMapeados = {
     "pedigree": { preco: 189.99, estoqueInicial: 3 },
@@ -24,8 +19,8 @@ const PRODUTOS: ProdutosMapeados = {
 let estoqueBruto = localStorage.getItem("estoque");
 let quantidadeBruta = localStorage.getItem("quantidade");
 
-let estoque: EstoqueTipagem = {};
-let quantidade: QuantidadeTipagem = {};
+let estoque: EstoqueTipagem;
+let quantidade: QuantidadeTipagem;
 
 if (estoqueBruto && estoqueBruto.trim().startsWith("{")) {
     estoque = JSON.parse(estoqueBruto);
@@ -59,7 +54,9 @@ function atualizarEstoqueECarrinho(): void {
 
     let totalGeral = 0;
 
-    for (const chave in PRODUTOS) {
+    const chaves = Object.keys(PRODUTOS) as ProdutoChaves[];
+
+    for (const chave of chaves) {
         let elementoEstoque = document.getElementById(`estoque-quantidade-${chave}`);
         if (elementoEstoque) {
             elementoEstoque.textContent = String(estoque[chave]);
@@ -83,8 +80,8 @@ function atualizarEstoqueECarrinho(): void {
     }
 }
 
-function adicionarAoCarrinho(chaveId: string): void {
-    if (estoque[chaveId] !== undefined && estoque[chaveId] > 0) {
+function adicionarAoCarrinho(chaveId: ProdutoChaves): void {
+    if (estoque[chaveId] > 0) {
         estoque[chaveId]--;
         quantidade[chaveId]++;
         atualizarEstoqueECarrinho();
@@ -93,8 +90,8 @@ function adicionarAoCarrinho(chaveId: string): void {
     }
 }
 
-function removerDoCarrinho(chaveId: string): void {
-    if (quantidade[chaveId] !== undefined && quantidade[chaveId] > 0) {
+function removerDoCarrinho(chaveId: ProdutoChaves): void {
+    if (quantidade[chaveId] > 0) {
         estoque[chaveId]++;
         quantidade[chaveId]--;
         atualizarEstoqueECarrinho();
