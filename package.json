@@ -1,0 +1,28 @@
+{
+  "name": "capacitacao-ejcomp",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido durante a capacitação de trainees da EJCOMP",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx lite-server",
+    "test": "echo \"Nenhum teste foi criado\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucascesar918/Capacitacao-EJCOMP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucascesar918/Capacitacao-EJCOMP/issues"
+  },
+  "homepage": "https://github.com/lucascesar918/Capacitacao-EJCOMP#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^6.0.3"
+  }
+}
