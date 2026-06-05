@@ -15,11 +15,13 @@ function fazerLogin() {
     return;
   }
 
+  const usuario = cadastros[email.value];
+
   if (
-    cadastros[email.value] &&
-    cadastros[email.value].password === senha.value
+    usuario &&
+    usuario.password === senha.value
   ) {
-    localStorage.setItem("usuarioLogado", cadastros[email.value].user);
+    localStorage.setItem("usuarioLogado", usuario.user);
     (document.getElementById("form") as HTMLFormElement).reset();
     window.location.href = "../index.html";
     return;
@@ -29,5 +31,3 @@ function fazerLogin() {
   (document.getElementById("form") as HTMLFormElement).reset();
   return;
 }
-
-export {}
