@@ -1,28 +1,26 @@
 {
   "name": "capacitacao-ejcomp",
-  "version": "1.0.0",
-  "description": "Projeto desenvolvido durante a capacitação de trainees da EJCOMP",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "npx lite-server",
-    "test": "echo \"Nenhum teste foi criado\" && exit 1",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lucascesar918/Capacitacao-EJCOMP.git"
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/lucascesar918/Capacitacao-EJCOMP/issues"
-  },
-  "homepage": "https://github.com/lucascesar918/Capacitacao-EJCOMP#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1",
-    "typescript": "^6.0.3"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
