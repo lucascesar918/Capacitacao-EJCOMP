@@ -25,7 +25,7 @@ export default function Header() {
     }
 
     alert('Faça login para acessar o carrinho.');
-    window.location.href = '/login.html';
+    window.location.href = '/login';
   };
 
   const handlePerfilClick = () => {
@@ -35,12 +35,12 @@ export default function Header() {
         window.localStorage.removeItem('usuarioLogado');
         setUsuarioLogado(null);
         alert('Logout realizado com sucesso!');
-        window.location.href = '/index.html';
+        window.location.href = '/';
       }
       return;
     }
 
-    window.location.href = '/login.html';
+    window.location.href = '/login';
   };
 
   return (
@@ -49,10 +49,10 @@ export default function Header() {
         <img src="/assets/logo.jpeg" alt="Logo petshop" className={styles.logo} />
       </a>
       <nav className={styles.nav}>
-        <a href="/index.html" className={styles.linkButton}>Página Inicial</a>
-        <a href="/index.html#sobre" className={styles.linkButton}>Sobre</a>
-        <a href="/index.html#servicos" className={styles.linkButton}>Serviços</a>
-        <a href="/index.html#produtos" className={styles.linkButton}>Produtos</a>
+        <a href="/" className={styles.linkButton}>Página Inicial</a>
+        <a href="#sobre" className={styles.linkButton}>Sobre</a>
+        <a href="/#servicos" className={styles.linkButton}>Serviços</a>
+        <a href="/#produtos" className={styles.linkButton}>Produtos</a>
         <a href="#contato" className={styles.linkButton}>Contate-nos</a>
         <button type="button" onClick={handlePerfilClick} className={`${styles.linkButton} ${styles.loginButton}`}>
           <img src="/assets/usuario.svg" className={styles.icon} />
