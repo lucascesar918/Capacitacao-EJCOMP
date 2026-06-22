@@ -2,6 +2,8 @@
 
 Projeto desenvolvido durante a capacitação de trainees da **Empresa Júnior de Computação (EJCOMP)**. O objetivo foi aplicar conceitos práticos de desenvolvimento web front-end e arquitetura de software.
 
+Veja a [demonstração](https://capacitacao-ejcomp.vercel.app/) do projeto.
+
 ## Autores
 
 | [<img src="https://github.com/lucascesar918.png" width="60px;"/><br /><sub><b>Lucas César</b></sub>](https://github.com/lucascesar918) | [<img src="https://github.com/nataliacampossoares.png" width="60px;"/><br /><sub><b>Natália Campos</b></sub>](https://github.com/nataliacampossoares) | [<img src="https://github.com/marcos-sellin.png" width="60px;"/><br /><sub><b>Marcos Sellin</b></sub>](https://github.com/marcos-sellin) |
@@ -49,4 +51,4 @@ npm run start
 ## Próximos Passos
 - [X] Migração para TypeScript
 - [X] Migração completa para Next
-- [ ] Subir uma demonstração ao vivo do projeto
+- [X] Subir uma demonstração ao vivo do projeto
