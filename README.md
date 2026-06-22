@@ -48,5 +48,5 @@ npm run start
 
 ## Próximos Passos
 - [X] Migração para TypeScript
-- [ ] Migração completa para Next
+- [X] Migração completa para Next
 - [ ] Subir uma demonstração ao vivo do projeto
