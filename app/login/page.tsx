@@ -2,6 +2,8 @@
 
 import styles from "./page.module.css";
 import { useRef } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const cadastros: { [email: string]: { user: string; password: string } } = {
   "nati@gmail.com": { user: "Nati", password: "12345678" },
@@ -14,6 +16,7 @@ const cadastros: { [email: string]: { user: string; password: string } } = {
 export default function Login() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   function handleLogin() {
     const email = emailRef.current?.value ?? "";
@@ -28,7 +31,7 @@ export default function Login() {
 
     if (usuario && usuario.password === password) {
       localStorage.setItem("usuarioLogado", usuario.user);
-      window.location.href = "/";
+      router.push("/");
       return;
     }
 
@@ -40,13 +43,13 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <a href="/index.html">
+        <Link href="/">
           <img
             src="/assets/logo.jpeg"
             alt="Logo petshop"
             className={styles.logo}
           />
-        </a>
+        </Link>
       </div>
       <div className={styles.content}>
         <h1 className={styles.h1}>Faça o seu login para continuar</h1>

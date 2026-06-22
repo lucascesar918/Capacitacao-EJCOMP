@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [usuarioLogado, setUsuarioLogado] = useState<string | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const storedUsuario = window.localStorage.getItem('usuarioLogado');
@@ -20,12 +23,12 @@ export default function Header() {
 
   const handleCheckLogin = () => {
     if (usuarioLogado) {
-      window.location.href = '/carrinho';
+      router.push('/carrinho');
       return;
     }
 
     alert('Faça login para acessar o carrinho.');
-    window.location.href = '/login';
+    router.push('/login');
   };
 
   const handlePerfilClick = () => {
@@ -35,31 +38,33 @@ export default function Header() {
         window.localStorage.removeItem('usuarioLogado');
         setUsuarioLogado(null);
         alert('Logout realizado com sucesso!');
-        window.location.href = '/';
+        router.push('/');
       }
       return;
     }
 
-    window.location.href = '/login';
+    router.push('/login');
   };
 
   return (
     <header className={styles.header}>
-      <a href="/index.html">
+      <Link href="/">
         <img src="/assets/logo.jpeg" alt="Logo petshop" className={styles.logo} />
-      </a>
+      </Link>
+      
       <nav className={styles.nav}>
-        <a href="/" className={styles.linkButton}>Página Inicial</a>
-        <a href="#sobre" className={styles.linkButton}>Sobre</a>
-        <a href="/#servicos" className={styles.linkButton}>Serviços</a>
-        <a href="/#produtos" className={styles.linkButton}>Produtos</a>
-        <a href="#contato" className={styles.linkButton}>Contate-nos</a>
+        <Link href="/" className={styles.linkButton}>Página Inicial</Link>
+        <Link href="#sobre" className={styles.linkButton}>Sobre</Link>
+        <Link href="/#servicos" className={styles.linkButton}>Serviços</Link>
+        <Link href="/#produtos" className={styles.linkButton}>Produtos</Link>
+        <Link href="#contato" className={styles.linkButton}>Contate-nos</Link>
+        
         <button type="button" onClick={handlePerfilClick} className={`${styles.linkButton} ${styles.loginButton}`}>
-          <img src="/assets/usuario.svg" className={styles.icon} />
+          <img src="/assets/usuario.svg" className={styles.icon} alt="Perfil" />
           <span>{usuarioLogado ?? 'Entrar'}</span>
         </button>
         <button type="button" onClick={handleCheckLogin} className={`${styles.linkButton} ${styles.iconButton}`}>
-          <img src="/assets/carrinho.svg" className={styles.icon} />
+          <img src="/assets/carrinho.svg" className={styles.icon} alt="Carrinho" />
         </button>
       </nav>
     </header>
