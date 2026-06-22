@@ -42,6 +42,7 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
+      <title>Login</title>
       <div className={styles.header}>
         <Link href="/">
           <img

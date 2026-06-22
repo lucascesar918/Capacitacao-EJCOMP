@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
+      <title>Pet Shop</title>
       <Header />
       <main className={styles.main}>
         <section id="sobre" className={styles.sobreSection}>

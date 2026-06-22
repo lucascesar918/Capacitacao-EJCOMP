@@ -80,6 +80,7 @@ export default function Carrinho() {
 
   return (
     <main>
+      <title>Meu Carrinho</title>
       <Header />
       <hr className={styles["divisor-carrinho"]} />
       <h1 className={styles["h1-carrinho"]}>Produtos adicionados ao carrinho</h1>
