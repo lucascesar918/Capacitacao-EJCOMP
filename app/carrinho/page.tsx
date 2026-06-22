@@ -1,6 +1,8 @@
 'use client';
 
 import styles from "./page.module.css";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { useState, useEffect } from "react";
 
 interface ProdutosTipagem {
@@ -78,6 +80,7 @@ export default function Carrinho() {
 
   return (
     <main>
+      <Header />
       <hr className={styles["divisor-carrinho"]} />
       <h1 className={styles["h1-carrinho"]}>Produtos adicionados ao carrinho</h1>
       <section id="carrinho">
@@ -134,6 +137,7 @@ export default function Carrinho() {
         <h2 className={styles["h2-carrinho"]}>Total dos produtos: R$ <span>{totalGeral.toFixed(2)}</span></h2>
       </section>
       <hr className={styles["divisor-carrinho"]} />
+      <Footer />
     </main>
   );
 }

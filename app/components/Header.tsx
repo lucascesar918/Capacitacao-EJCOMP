@@ -20,7 +20,7 @@ export default function Header() {
 
   const handleCheckLogin = () => {
     if (usuarioLogado) {
-      window.location.href = '/carrinho.html';
+      window.location.href = '/carrinho';
       return;
     }
 

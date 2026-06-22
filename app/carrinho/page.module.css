@@ -12,23 +12,33 @@
   --texto-titulos: #1d3557;
 }
 
-h1, h2, h3, label {
+:global(h1), :global(h2), :global(h3), :global(label) {
   font-family: "Poppins", sans-serif;
   color: var(--texto-titulos);
 }
 
-p {
+:global(p) {
   color: var(--texto-escuro);
   font-family: "Inter", sans-serif;
 }
 
+:global(main) {
+  box-sizing: border-box;
+  background-color: var(--bg-principal);
+  padding-top: 120px;
+  min-height: 100vh;
+}
+
 .h1-carrinho {
-  margin: 20px;
+  margin: 20px 40px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .h2-carrinho {
   display: flex;
-  margin: 20px;
+  margin: 30px 40px;
+  font-size: 1.5rem;
 }
 
 .divisor-carrinho {
@@ -41,83 +51,85 @@ p {
 .carrinho {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
 .carrinho-produto {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center; 
+  gap: 30px;
   background-color: var(--bg-cards);
-  margin: 15px 20px;
-  border-radius: 16px;
   border: 2px solid var(--cor-secundaria);
-  overflow: hidden;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 0 40px 25px 40px; 
 }
 
 .img-carrinho-produto {
-  display: flex;
-  margin: 20px;
-  width: 100%;
-  max-width: 100px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 15px;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0; 
+  display: block;
 }
 
 .carrinho-produto-conteudo {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  gap: 10px; 
+  max-width: 60%; 
 }
 
 .carrinho-nome {
-  font-size: 18px;
+  font-size: 1.15rem;
+  font-weight: bold;
   line-height: 1.4;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .carrinho-descricao {
-  font-size: 15px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
 }
 
 .carrinho-preco {
-  font-size: 20px;
-  color: var(--texto-titulos);
-  font-weight: bold;
+  font-size: 1rem;
+  color: var(--texto-escuro);
+  font-weight: normal;
+  margin: 0;
 }
 
 .carrinho-botao {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  padding: 0 20px 0 0;
-  gap: 8px;
+  margin-left: auto; 
+  gap: 10px;
+  min-width: 220px;
 }
 
 .quantidade {
   background: none;
   border: none;
-  padding: 15px 0 0 0;
+  padding: 5px 0 0 0;
+  font-size: 1rem;
+  color: var(--texto-escuro);
 }
 
 .carrinho-botao button {
   background-color: var(--cor-primaria);
   color: var(--bg-branco);
   border: none;
-  border-radius: 10px;
-  padding: 12px 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   width: 100%;
+  letter-spacing: 0.5px;
 }
 
 .carrinho-botao button:hover {
-  color: var(--cor-destaque);
   background-color: var(--cor-secundaria);
 }
