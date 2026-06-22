@@ -1,0 +1,59 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 64px;
+  padding: 40px 48px;
+  flex-wrap: wrap;
+  background-color: var(--bg-cards);
+  color: var(--texto-escuro);
+  border-top: 1px solid rgba(29, 53, 87, 0.12);
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.paymentIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.paymentIcons img {
+  width: 50px;
+  height: auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .paymentIcons {
+    justify-content: center;
+  }
+}

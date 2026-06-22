@@ -1,0 +1,102 @@
+:root {
+  --bg-principal: #f4f9f4;
+  --bg-cards: #ffffff;
+  --cor-primaria: #1d3557;
+  --cor-secundaria: #457b9d;
+  --cor-destaque: #e6ac39;
+  --cor-hover-botao: #1d3557;
+  --texto-escuro: #2b2d42;
+  --texto-titulos: #1d3557;
+  --texto-claro: #ffffff;
+  --cor-borda: #cccccc; 
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-principal);
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  height: 100px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--cor-primaria);
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.h1 {
+  font-family: "Poppins", sans-serif;
+  color: var(--texto-titulos);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form {
+  background-color: var(--bg-cards);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 650px;
+}
+
+.label {
+  color: var(--cor-primaria);
+  font-size: 1.2rem; 
+  font-weight: 600;  
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.input {
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--cor-primaria);
+}
+
+.button {
+  background-color: var(--cor-primaria);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.content{
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: column;
+}
