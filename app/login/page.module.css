@@ -8,7 +8,7 @@
   --texto-escuro: #2b2d42;
   --texto-titulos: #1d3557;
   --texto-claro: #ffffff;
-  --cor-borda: #cccccc; 
+  --cor-borda: #cccccc;
 }
 
 .container {
@@ -65,8 +65,8 @@
 
 .label {
   color: var(--cor-primaria);
-  font-size: 1.2rem; 
-  font-weight: 600;  
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .formGroup {
@@ -95,8 +95,26 @@
   margin-top: 0.5rem;
 }
 
-.content{
+.content {
   display: flex;
   padding-top: 2rem;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 325px;
+  }
+
+  .h1 {
+    font-size: 1.25rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .header {
+    justify-content: center;
+  }
 }
